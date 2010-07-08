@@ -11,7 +11,10 @@
   Maintainer: jan.winkelmann@tuhh.de
   URL       : http://github.com/reforged/SE-Review
   Date      : 2010/7/8
-
+  TODO      : Assign headings to lectures,
+              entire lecture 6
+              marks things that need to be learned as a skill
+              
  -->
 # SE #
 
