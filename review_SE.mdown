@@ -3,7 +3,6 @@
     **                                                                 **    
     **                       Short summary of                          **    
     **                     SOFTWARE ENGINEERING                        **    
-    **                Schupp, TU Harburg, SoSe 2010                    **    
     **                                                                 **    
     *********************************************************************    
     
@@ -12,8 +11,8 @@
   URL       : http://github.com/reforged/SE-Review
   Date      : 2010/7/8
   TODO      : Assign headings to lectures,
-              entire lecture 6
               marks things that need to be learned as a skill
+              2nd part of lecture 7
               
  -->
 # SE #
@@ -76,6 +75,7 @@
 ## UML (Lecture ?? TODO)##
 
 ### Class Diagrams
+TODO put stuff from week 7 page 24 on here
 ### Use-Case Diagrams
 ### UML sequence, activity and statechart
 
@@ -109,12 +109,29 @@
   * Data Flow Diagrams
 
 
----
-
-TODO
-
 ## Software Design (Lecture 6)##
-TODO
+  * Bridging OOA and implementation
+
+### Class diagrams
+  see UML
+
+### OCL
+  * constraints supported:
+    * Class invariants
+    * Precondition
+    * Postcondition
+  * use '.' on objects, '->' on sets
+  * set operations:
+    * isEmpty(), nonEmpty()
+    * max(), min(), 
+    * select(age > 50), forALL(name= 'Bob')
+  * age = age@pre + 1
+
+### OO high-level design pattern
+  * layered architecture
+  * Client-server
+  * peer-to-peer
+  * pipe-and-filter
 
 ## Object-Oriented Analysis and Design (Lecture 7) ##
 ### Object-oriented analysis
