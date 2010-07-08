@@ -1,0 +1,225 @@
+<!-- 
+    *********************************************************************    
+    **                                                                 **    
+    **                       Short summary of                          **    
+    **                     SOFTWARE ENGINEERING                        **    
+    **                Schupp, TU Harburg, SoSe 2010                    **    
+    **                                                                 **    
+    *********************************************************************    
+    
+  Markup    : Markdown (http://daringfireball.net/projects/markdown/)
+  Maintainer: jan.winkelmann@tuhh.de
+  URL       : http://github.com/reforged/SE-Review
+  Date      : 2010/7/8
+
+ -->
+# SE #
+
+## Intro (Lecture 1) ##
+  * Definitions of 'Software' & 'Software Engineering'
+  * 'software crisis'
+  * Stages in SE: Definition, Implementation, Maintenance
+
+## Life cycle Models (Lecture 1 & 2)##
+
+### Development Activities
+  * Requirement Analysis
+  * Design
+  * Implementation
+  * Testing
+  * Installation and deployment
+
+### Waterfall
+  * The Classic
+  * Goes straight down the Development Activities
+  * Problems
+    * No overlapping
+    * No parallel activities
+    * No feedback or iteration
+  
+### Evolutionary Models
+  * Prototyping, to find requirements
+    * Either throw-away or evolutionary
+  *Pros:
+    * Requirements elicitation and validation
+    * lower costs
+  * Tends to inefficiencies
+
+### Object Oriented
+  * Object Oriented Analysis
+  * Object Oriented Design
+  * Implementation
+
+### Spiral Model
+  * Loops through
+    1. Determine objectives, alternatives and constraints
+    2. Evaluate alternatives and manage risks
+    3. Develop and verify
+    4. Plan next phase
+  * Has lots of overhead
+
+### Agile Programming
+  * Incremental development and deliverables
+  * Practices: pair-programming; nightly builds; test-driven development
+  * Advantages: Customer involvement
+  * Disadvantages: Architecture ad-hoc, Success depends on customer
+
+## Software Standards (Lecture ?? TODO)##
+  * Many IEEE
+  * ISO 90003 (?)
+  * Capability Maturity Model
+    * Assesses process maturity (1-5)
+
+## UML (Lecture ?? TODO)##
+
+### Class Diagrams
+### Use-Case Diagrams
+### UML sequence, activity and statechart
+
+## Requirements (Lecture 3)##
+
+### Functional
+  * aka Features
+
+### Non-Functional
+  * Technical
+    * User Concern
+      * Reliability
+      * Security
+      * User Friendliness
+    * Developer Concern
+      * Operability
+      * Maintainability
+      * Scalability
+  * Non-Technical
+    * Cultural and political issues
+    * Adherence to standards
+
+## Behavioral Modeling (Lecture 4 & 5)##
+
+### FSM
+### Petri Nets 
+### UML sequence, activity and statechart
+
+## Data Modelling
+  * consider a software system as an information processor
+  * Data Flow Diagrams
+
+
+---
+
+TODO
+
+## Software Design (Lecture 6)##
+TODO
+
+## Object-Oriented Analysis and Design (Lecture 7) ##
+### Object-oriented analysis
+  * Process
+    * What are the objects and their attributes? [identify nouns]
+    * What are the relationships among objects?
+      * Generalization-specialization ("inheritance", "is a") [hollow arrowhead]
+      * Composition ("part of") [diamond]
+      * Association [straight line]
+    * What are the states and transitions of an object?
+    * What are the interactions among objects?
+      * Sequence diagrams
+      * Communication diagrams
+
+### Object-oriented design
+  MISSING
+
+## Project Management (Lecture 8)##
+Because Software Projects are often big and always intangible. Therefore hard to estimate.
+
+### Cost Estimation
+
+#### Estimation Techniques
+##### Software Metrics
+  * Empiric models have the form E = (a+(b.Size^c)).F 
+  * a,b,c empiric constants
+  * Size usually KSLOC or points
+  * F is correction factor
+
+##### Requirement-based
+  * called Black box
+  * uses function (and other) point systems
+  * Example Function Points 
+    * 5 kinds of functional components(i.e. # of database files ) 
+    * 3 complexity levels
+    * then adjustment based on 14 environmental factors (i.e Ease of Use)
+  * Example Use-Case Points
+    * extends Function Points metric based on complexity of use cases and technical factors (has other env. factors)
+
+##### Implementation-based
+  * called White Box (any non-requirement based system is so called)
+  * example: COCOMO "constructive cost model" (empiric), has 3 levels and 3 different types of complexity. Estimates with KSLOC
+
+### Scheduling and tracking 
+  * captures Time, Dependencies and Milestones/Deliverables
+
+#### Gantt Charts
+  * Matrix: activities x timeline
+  * Critical Path: minimum time required to finish the project (multiple path might exist)
+  * Slack: earliest possible start
+  * Float: latest possible start without project delay (sometimes not separated from slack)
+  * usual goal: use slack/float to min parallelism to min workers req
+  * Critical path not always visible (depends on version)
+
+#### Pert Charts
+  * Directed graph, nodes are activities, edges are dependencies
+  * Gantt and PERT complement each other
+
+### Risk analysis
+  TODO
+
+
+## Implementation (Lecture 9) ##
+
+### APIs
+  * APIs should provide sufficient functionality
+  * An API should be minimal
+  * General purpose APIs should be policy-free
+  * APIs should be documented before they are implemented
+
+### Resource handling
+  * Resource-acquisition-is-initialization
+
+### Exception Safety
+  * Analysis
+
+## Testing (Lecture 10-11)##
+
+### Black-box testing
+
+#### Boundary testing
+#### State-based testing
+#### Decision-table-based testing
+
+### White-box
+#### Control-flow graphs
+  * Statement coverage
+  * Decision coverage
+
+#### Data-flow graphs
+  * def-use path
+  * def-free path
+
+### Testing in the large
+#### Top-down integration
+  * uses stub modules
+  * good for GUI testing
+  * real data is integrated late
+
+#### Bottom-up integration
+  * requires drivers
+  * most time goes into testing low level modules
+  * testers see the whole system very late
+
+#### Sandwich integration
+  * Two teams, meet in the middle
+
+#### System level tests
+  * Black box testing
+  * Acceptance testing
+  * NFR testing
