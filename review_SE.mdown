@@ -77,7 +77,7 @@
 ### Class Diagrams
 TODO put stuff from week 7 page 24 on here
 ### Use-Case Diagrams
-### UML sequence, activity and statechart
+### UML sequence, activity and state chart
 
 ## Requirements (Lecture 3)##
 
@@ -102,7 +102,7 @@ TODO put stuff from week 7 page 24 on here
 
 ### FSM
 ### Petri Nets 
-### UML sequence, activity and statechart
+### UML sequence, activity and state chart
 
 ## Data Modelling
   * consider a software system as an information processor
@@ -110,30 +110,45 @@ TODO put stuff from week 7 page 24 on here
 
 
 ## Software Design (Lecture 6)##
-  * Bridging OOA and implementation
+* Important concepts
+  * Abstraction
+  * Invariance
+  * Modularity
+  * Encapsulation
+  * Separation of concerns
+  * Interfaces
+* Other desirable properties
+  * Fault tolerance, Scalability, Security...
 
-### Class diagrams
-  see UML
+### Architectural design
+#### Module hierarchy
+* Intermodule coupling (the higher the better)
+  * data-coupled (only processed data is passed)
+  * stamp-couples (more than needed data is passed)
+  * control-coupled (passes control pass)
+  * common-coupled (shared resource)
+  * content-coupled (one module changes variables of the other)
 
-### OCL
-  * constraints supported:
-    * Class invariants
-    * Precondition
-    * Postcondition
-  * use '.' on objects, '->' on sets
-  * set operations:
-    * isEmpty(), nonEmpty()
-    * max(), min(), 
-    * select(age > 50), forALL(name= 'Bob')
-  * age = age@pre + 1
+#### Structured Design
+* Intramodule Cohesion (the lower the better)
+  * Coincidental
+  * Logical (similar activities based on a passed control variable)
+  * Temporal (unrelated steps that need to be done at the same time)
+  * Procedural (unrelated activities in specific order)
+  * Communicational (sharing same I/O)
+  * Sequential (one part depends on the output another part)
+  * Functional (strongly-related steps)
 
-### OO high-level design pattern
-  * layered architecture
-  * Client-server
-  * peer-to-peer
-  * pipe-and-filter
+### Design by contract
+  * A class invariant is a boolean predicate that defines the properties that all instances of the class must meet.
+
+  * Design by contract
+    * TODO
+  * Inductive Reasoning
+    * TODO
 
 ## Object-Oriented Analysis and Design (Lecture 7) ##
+
 ### Object-oriented analysis
   * Process
     * What are the objects and their attributes? [identify nouns]
@@ -147,7 +162,28 @@ TODO put stuff from week 7 page 24 on here
       * Communication diagrams
 
 ### Object-oriented design
-  MISSING
+  * Bridging OOA and implementation
+
+#### Class diagrams
+  see UML
+
+#### OCL
+  * constraints supported:
+    * Class invariants
+    * Precondition
+    * Postcondition
+  * use '.' on objects, '->' on sets
+  * set operations:
+    * isEmpty(), nonEmpty()
+    * max(), min(), 
+    * select(age > 50), forALL(name= 'Bob')
+  * age = age@pre + 1
+
+#### OO high-level design pattern
+  * layered architecture
+  * Client-server
+  * peer-to-peer
+  * pipe-and-filter
 
 ## Project Management (Lecture 8)##
 Because Software Projects are often big and always intangible. Therefore hard to estimate.
@@ -215,8 +251,17 @@ Because Software Projects are often big and always intangible. Therefore hard to
 #### Boundary testing
 #### State-based testing
 #### Decision-table-based testing
+  * Decision Table specifies behavior of a process
+  * Minimize decision tabel
+  * select inputs that all decision points are covered
+
+#### Robustness tests
+  * uses illegal inputs
+  * tests behavior with exceptional circumstances
 
 ### White-box
+  * Generally looks into the Code
+  
 #### Control-flow graphs
   * Statement coverage
   * Decision coverage
@@ -224,6 +269,11 @@ Because Software Projects are often big and always intangible. Therefore hard to
 #### Data-flow graphs
   * def-use path
   * def-free path
+
+#### Test coverage
+  * Statement Coverage
+  * Decision Coverage
+  * TODO: The difference and example/code
 
 ### Testing in the large
 #### Top-down integration
