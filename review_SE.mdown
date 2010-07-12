@@ -10,12 +10,12 @@
   Maintainer: jan.winkelmann@tuhh.de
   URL       : http://github.com/reforged/SE-Review
   Date      : 2010/7/8
-  TODO      : Assign headings to lectures,
-              marks things that need to be learned as a skill
-              2nd part of lecture 7
+  TODO      : marks things that need to be learned in Exercises
+              Just search for TODO
+              Add even more info
               
  -->
-# SE #
+# Software Engineering #
 
 ## Intro (Lecture 1) ##
   * Definitions of 'Software' & 'Software Engineering'
@@ -42,7 +42,7 @@
 ### Evolutionary Models
   * Prototyping, to find requirements
     * Either throw-away or evolutionary
-  *Pros:
+  * Pros:
     * Requirements elicitation and validation
     * lower costs
   * Tends to inefficiencies
@@ -66,20 +66,22 @@
   * Advantages: Customer involvement
   * Disadvantages: Architecture ad-hoc, Success depends on customer
 
-## Software Standards (Lecture ?? TODO)##
-  * Many IEEE
-  * ISO 90003 (?)
+## Software Standards (Lecture 2)##
+  * Many IEEE Standards
+  * ISO 90003 
+    * Quality Assurance Model 
+    * Requires certification and auditing
   * Capability Maturity Model
     * Assesses process maturity (1-5)
 
-## UML (Lecture ?? TODO)##
+## UML (Lecture 2)##
 
 ### Class Diagrams
 TODO put stuff from week 7 page 24 on here
-### Use-Case Diagrams
-### UML sequence, activity and state chart
+### Use-Case Diagrams [See exercise]
+### UML sequence, activity and state chart [See exercise]
 
-## Requirements (Lecture 3)##
+## Requirements (Lecture 2-3)##
 
 ### Functional
   * aka Features
@@ -100,14 +102,13 @@ TODO put stuff from week 7 page 24 on here
 
 ## Behavioral Modeling (Lecture 4 & 5)##
 
-### FSM
-### Petri Nets 
-### UML sequence, activity and state chart
+### FSM [See exercise]
+### Petri Nets  [See exercise]
+### UML sequence, activity and state chart [See exercise]
 
-## Data Modelling
+## Data Modeling
   * consider a software system as an information processor
   * Data Flow Diagrams
-
 
 ## Software Design (Lecture 6)##
 * Important concepts
@@ -189,7 +190,6 @@ TODO put stuff from week 7 page 24 on here
 Because Software Projects are often big and always intangible. Therefore hard to estimate.
 
 ### Cost Estimation
-
 #### Estimation Techniques
 ##### Software Metrics
   * Empiric models have the form E = (a+(b.Size^c)).F 
@@ -214,7 +214,7 @@ Because Software Projects are often big and always intangible. Therefore hard to
 ### Scheduling and tracking 
   * captures Time, Dependencies and Milestones/Deliverables
 
-#### Gantt Charts
+#### Gantt Charts [See exercise]
   * Matrix: activities x timeline
   * Critical Path: minimum time required to finish the project (multiple path might exist)
   * Slack: earliest possible start
@@ -222,7 +222,7 @@ Because Software Projects are often big and always intangible. Therefore hard to
   * usual goal: use slack/float to min parallelism to min workers req
   * Critical path not always visible (depends on version)
 
-#### Pert Charts
+#### Pert Charts [See exercise]
   * Directed graph, nodes are activities, edges are dependencies
   * Gantt and PERT complement each other
 
@@ -247,12 +247,16 @@ Because Software Projects are often big and always intangible. Therefore hard to
 ## Testing (Lecture 10-11)##
 
 ### Black-box testing
-
+  * Does not look into the Code (or just the header files)
+  
 #### Boundary testing
+  * Tests boundary values
+    * Ex: -1,0,1, MAX\_INT -1, MAX\_INT, MAX\_INT+1
+  
 #### State-based testing
 #### Decision-table-based testing
   * Decision Table specifies behavior of a process
-  * Minimize decision tabel
+  * Minimize decision table
   * select inputs that all decision points are covered
 
 #### Robustness tests
